@@ -1,26 +1,17 @@
-import { Header } from "../../components/Header";
-import { SearchForm } from "./SearchForm";
-import { Summary } from "../../components/Summary";
+import { Header } from '../../components/Header'
+import { SearchForm } from './SearchForm'
+import { Summary } from '../../components/Summary'
 import {
   PriceHighlight,
   TransactionContainer,
   TransactionTable,
-} from "./styles";
-import { useContext, useEffect, useState } from "react";
-import { TransactionsContext } from "../../contexts/TransactionsContext";
-import { dateFormatter, priceFormatter } from "../../utils/formatter";
-
-interface Transaction {
-  id: number;
-  description: string;
-  type: "income" | "outcome";
-  price: number;
-  category: string;
-  createdAt: string;
-}
+} from './styles'
+import { useContext } from 'react'
+import { TransactionsContext } from '../../contexts/TransactionsContext'
+import { dateFormatter, priceFormatter } from '../../utils/formatter'
 
 export function Transactions() {
-const { transactions} = useContext(TransactionsContext)
+  const { transactions } = useContext(TransactionsContext)
 
   return (
     <div>
@@ -30,7 +21,6 @@ const { transactions} = useContext(TransactionsContext)
         <SearchForm />
         <TransactionTable>
           <tbody>
-
             {transactions.map((transaction) => {
               return (
                 <tr key={transaction.id}>
@@ -42,15 +32,16 @@ const { transactions} = useContext(TransactionsContext)
                     </PriceHighlight>
                   </td>
                   <td>{transaction.category}</td>
-               
-                  <td>{dateFormatter.format( new Date(transaction.createdAt))}</td>
-                </tr>
-              );
-            })}
 
+                  <td>
+                    {dateFormatter.format(new Date(transaction.createdAt))}
+                  </td>
+                </tr>
+              )
+            })}
           </tbody>
         </TransactionTable>
       </TransactionContainer>
     </div>
-  );
+  )
 }
