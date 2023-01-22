@@ -50,7 +50,12 @@ form{
         border-radius: 6px;
         margin-top: 1.5rem;
 
-        &:hover{
+        &disabled{
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        &:not(:disabled)hover{
             background: ${props=>props.theme['green-700']}; 
             transition: background-color 0.2s; 
         }
@@ -105,7 +110,7 @@ svg{
 
 &[data-state='checked']{
     color: color:${props=>props.theme.white};
-    color:${props=> props.variant === 'income' ? props.theme['green-500']: props.theme['red-500']};
+    background:${props=> props.variant === 'income' ? props.theme['green-500']: props.theme['red-500']};
 };
 
 svg{
