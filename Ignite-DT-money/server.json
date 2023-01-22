@@ -1,29 +1,36 @@
 {
-    "transactions":[
-        {
-            "id": 1,
-            "description": "Desenvolvimento de site",
-            "type":"income",
-            "category":"venda",
-            "price":14000,
-            "createdAt": "2023-01-21T13:18:16.022Z"
-        },
-        {
-            "id": 2,
-            "description": "Desenvolvimento de uma API",
-            "type":"outcome",
-            "category":"informatica",
-            "price":2000,
-            "createdAt": "2023-01-22T13:18:16.022Z"
-        } ,
-        {
-            "id": 3,
-            "description": "Estágio",
-            "type":"outcome",
-            "category":"informatica",
-            "price":1800,
-            "createdAt": "2023-01-23T13:18:16.022Z"
-        } 
-    ]
-
+  "transactions": [
+    {
+      "id": 1,
+      "description": "Desenvolvimento de site",
+      "type": "income",
+      "category": "venda",
+      "price": 14000,
+      "createdAt": "2023-01-21T13:18:16.022Z"
+    },
+    {
+      "id": 2,
+      "description": "Desenvolvimento de uma API",
+      "type": "outcome",
+      "category": "informatica",
+      "price": 2000,
+      "createdAt": "2023-01-22T13:18:16.022Z"
+    },
+    {
+      "description": "Acarajé",
+      "category": "alimentação",
+      "price": 12,
+      "type": "outcome",
+      "createdAt": "2023-01-22T21:58:25.691Z",
+      "id": 4
+    },
+    {
+      "description": "pastel",
+      "category": "alimentação",
+      "price": 11,
+      "type": "outcome",
+      "createdAt": "2023-01-22T22:02:30.199Z",
+      "id": 5
+    }
+  ]
 }
